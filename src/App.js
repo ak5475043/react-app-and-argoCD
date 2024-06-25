@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          hello this is a k8s deployment through argoCD
+           This is a k8s deployment through argoCD
         </p>
       </header>
     </div>

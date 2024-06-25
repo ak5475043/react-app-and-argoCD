@@ -7,17 +7,18 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/ak5475043/react-app.git
+    repoURL: https://github.com/ak5475043/react-app-and-argoCD.git
     targetRevision: HEAD
     path: dev
-  destination: 
+
+  destination:
     server: https://kubernetes.default.svc
     namespace: react
 
   syncPolicy:
-     syncOptions:
-     - CreateNamespace=true
-     
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
